@@ -50,7 +50,7 @@ app.get("/", (req, res) => {
 
                     if (cityQuery.includes("cityName")) {
                         cityName = cityQuery.slice(11);
-                        cityName = cityName.replace(/\+/g, ' ');
+                        cityName = cityName.replace(/\+/g, ' ').trim();
 
                     }
                     console.log(cityName);
