@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather for Kids</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #89CFF0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 64px;
+      font-family: 'Fredoka One', cursive, sans-serif;
+      margin-top: 50px;
+      color: #fff;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Arial', cursive, sans-serif;
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    .weather-icon {
+
+      margin-bottom: -32px;
+    }
+
+    label {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+
+    .weather {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .weather-item {
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .weather-item img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .weather-item h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .weather-item p {
+      font-size: 24px;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Weather for Kids</h1>
+
+  <div class="weather">
+    <div class="weather-item">
+      <img src="https://img.icons8.com/plasticine/100/000000/sun.png" />
+      <h2>Sunny</h2>
+      <p>Temperature: 21°C</p>
+    </div>
+
+    <div class="weather-item">
+      <img src="https://img.icons8.com/plasticine/100/000000/partly-cloudy-day.png" />
+      <h2>Cloudy</h2>
+      <p>Temperature: 16°C</p>
+    </div>
+
+    <div class="weather-item">
+      <img src="https://img.icons8.com/plasticine/100/000000/rain.png" />
+      <h2>Rainy</h2>
+      <p>Temperature: 13°C</p>
+    </div>
+
+    <div class="weather-item">
+      <img src="https://img.icons8.com/plasticine/100/000000/snow.png" />
+      <h2>Snowy</h2>
+      <p>Temperature: 0°C</p>
+    </div>
+  </div>
+  <div class="day_location">
+    <h3>Today is: <%= currentDay %> 🦄</h3>
+    <h3>Location: <%= currentCity %></h3>
+    <h3>Current temperature is: <img class="weather-icon" src="<%= weatherIcon %>"> <%= currentTemp %>°C</h3>
+    <h3>The weather is: <%= weather %></h3>
+    <form>
+      <label method="POST" action="/form-submit">Choose other location:</label>
+      <input type="text" id="location" name="cityName">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script></script>
+</body>
+
+</html>
